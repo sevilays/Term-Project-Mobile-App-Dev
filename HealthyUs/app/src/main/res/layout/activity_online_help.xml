@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".online_help">
+
+    <TextView
+        android:id="@+id/txtOnlineHelpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="140dp"
+        android:text="@string/txtOnlineHelptitle"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtOnlineHelpUserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="106dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/txtOnlineHelpUserEmail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOnlineHelpTitle" />
+
+    <EditText
+        android:id="@+id/txtOnlineHelpDoctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="103dp"
+        android:ems="10"
+        android:hint="@string/txtOnlineHelpDoctorName"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOnlineHelpUserEmail"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/txtOnlineHelpComplaints"
+        android:layout_width="201dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="108dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/txtOnlineHelpComplaints"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOnlineHelpDoctorName"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btnOnlineHelpSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="192dp"
+        android:text="@string/btnOnlineHelpSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <TextView
+        android:id="@+id/txtLogout"
+        android:layout_width="91dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="188dp"
+        android:text="@string/txtLogout"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOnlineHelpSubmit" />
+
+    <TextView
+        android:id="@+id/txtOnlineHelpBill"
+        android:layout_width="89dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="220dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOnlineHelpComplaints">
+
+        <RadioButton
+            android:id="@+id/rdOnlineHelpWithNoMsp"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="142dp"
+            android:text="@string/rdOnlineHelpWithNoMsp" />
+
+        <RadioButton
+            android:id="@+id/rdOnlineHelpWithMsp"
+            android:layout_width="177dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="132dp"
+            android:text="@string/rdOnlineHelpWithMsp" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
